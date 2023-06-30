@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-shadow */
 /* eslint-disable react/jsx-no-constructed-context-values */
 /* eslint-disable consistent-return */
@@ -131,11 +132,11 @@ export default function App() {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    const jwt = localStorage.getItem('jwt');
+    const token = localStorage.getItem('jwt');
 
-    if (jwt) {
+    if (token) {
       auth
-        .checkToken(jwt)
+        .checkToken(token)
         .then((res) => {
           setIsLoggedIn(true);
           setEmail(res.data.email);
@@ -143,7 +144,7 @@ export default function App() {
         })
         .catch(console.error);
     }
-  }, [navigate]);
+  }, []);
 
   function handleRegisterSubmit({ email, password }) {
     auth
