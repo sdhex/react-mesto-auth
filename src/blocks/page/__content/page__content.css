@@ -1,0 +1,19 @@
+.page__content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 45px 0 60px;
+  max-width: 880px;
+  min-width: 320px;
+  background-color: #000;
+  font-family: 'Inter', 'Arial', sans-serif;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 580px) {
+  .page__content {
+    max-width: 282px;
+    padding: 28px 19px 36px;
+  }
+}
