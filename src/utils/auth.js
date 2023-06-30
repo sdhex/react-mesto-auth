@@ -14,20 +14,6 @@ function request(endpoint, options) {
   return fetch(`${BASE_URL}/${endpoint}`, options).then(checkResponse);
 }
 
-// export const register = ({ email, password }) => {
-//   return request(`signup`, {
-//     method: 'POST',
-//     headers: {
-//       'Accept': 'application/json',
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify({
-//       email,
-//       password,
-//     }),
-//   });
-// };
-
 export const register = ({ email, password }) => {
   return request(`signup`, {
     method: 'POST',
